@@ -10,11 +10,11 @@ O projeto foi desenvolvido em três camadas:
 
 ## Tecnologias Utilizadas
 - **Python 3.14**
-- **Bibliotecas:** Pandas, Scikit-Learn, YFinance, Joblib.
+- **Bibliotecas:** Pandas, Matplotlib, Numpy, Scikit-Learn, YFinance, Joblib.
 - **Indicadores Técnicos:** Médias Móveis Exponenciais (EMA) e Simples (SMA), ADX, Bollinger Bands.
 
 ## O Modelo
-O modelo de Regressão Linear foi treinado com foco em **momentum e volatilidade**, utilizando a distância do preço em relação às médias móveis e a espessura das bandas de Bollinger como principais preditores para evitar o superajuste ao preço nominal.
+O modelo de Regressão Linear foi treinado com foco em **momentum e volatilidade**, utilizando a distância do preço em relação às médias móveis e a espessura das bandas de Bollinger como preditores para evitar o superajuste ao preço nominal.
 
 ## Automação
 O script `automacao_itub4.py` realiza o download dos dados após o fechamento do mercado, processa os indicadores e, caso o modelo identifique um potencial de alta superior a X%, dispara um alerta via API do Telegram.
