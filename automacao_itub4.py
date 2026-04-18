@@ -26,8 +26,8 @@ except ImportError:
     print("Erro: O arquivo helpers.py deve estar na mesma pasta.")
 
 # --- CONFIGURAÇÕES DO TELEGRAM ---
-TELEGRAM_TOKEN = "8622738844:AAEVS4mrWxmh-jueYxVWGCbos0I8ymsO7M4"
-TELEGRAM_CHAT_ID = "7344559332"
+TELEGRAM_TOKEN = "TOKEN"
+TELEGRAM_CHAT_ID = "ID"
 
 def enviar_telegram(mensagem):
     """Envia uma notificação instantânea para o seu celular"""
