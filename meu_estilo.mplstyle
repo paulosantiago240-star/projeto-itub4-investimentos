@@ -1,0 +1,57 @@
+# =================================================================
+# ESTILO MATPLOTLIB: DATA PORTFOLIO (NEUTRAL & MODERN)
+# =================================================================
+
+# --- CORES DE FUNDO E FIGURA ---
+figure.facecolor: FFFFFF
+axes.facecolor: FFFFFF
+savefig.facecolor: FFFFFF
+
+# --- PALETA DE CORES (PROPCYCLE) ---
+# Ordem: Turquesa (Destaque), Azul Marinho (Contraste), Laranja (Alerta)
+axes.prop_cycle: cycler('color', ['00A2C7', '0D2C49', 'FF7800', '64748B', '2563EB'])
+
+# --- TEXTOS E RÓTULOS (CINZA NEUTRO) ---
+# Título principal (Cinza quase preto para peso visual)
+axes.titlecolor: 1F2937
+axes.titlesize: 16
+axes.titleweight: bold
+axes.titlelocation: left
+
+# Nomes dos eixos (Cinza Médio-Escuro)
+axes.labelcolor: 4B5563
+axes.labelsize: 11
+axes.labelweight: normal
+
+# Números e categorias nos eixos (Cinza Médio)
+xtick.color: 6B7280
+ytick.color: 6B7280
+xtick.labelsize: 10
+ytick.labelsize: 10
+
+# Texto geral e legendas
+text.color: 4B5563
+legend.edgecolor: F2F4F7
+legend.fontsize: 10
+
+# --- EIXOS E GRADE ---
+axes.edgecolor: D1D5DB    # Borda dos eixos em cinza claro
+axes.linewidth: 0.8
+axes.spines.top: False    # Remove borda superior (estilo clean)
+axes.spines.right: False  # Remove borda direita
+
+axes.grid: True
+grid.color: F3F4F6        # Grade muito sutil
+grid.linestyle: -
+grid.linewidth: 0.5
+
+# --- ELEMENTOS GRÁFICOS ---
+lines.linewidth: 2.5
+lines.markersize: 7
+patch.linewidth: 0.5
+patch.edgecolor: FFFFFF   # Borda branca em barras para separação
+patch.force_edgecolor: True
+
+# --- CONFIGURAÇÃO DE FONTE ---
+font.family: sans-serif
+font.sans-serif: Source Sans Pro, Inter, Helvetica, Arial
