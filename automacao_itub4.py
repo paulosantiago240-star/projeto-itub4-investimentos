@@ -19,13 +19,13 @@ def executar_automacao():
         print(f"❌ Erro: O arquivo .pkl não foi encontrado em: {diretorio_atual}")
         return
     
-# Importando sua função do helpers.py
+# Importando função do helpers.py
 try:
     from Códigos.helpers import calculate_dataframe_features
 except ImportError:
     print("Erro: O arquivo helpers.py deve estar na mesma pasta.")
 
-# --- CONFIGURAÇÕES DO TELEGRAM ---
+# CONFIGURAÇÕES DO TELEGRAM 
 TELEGRAM_TOKEN = "TOKEN"
 TELEGRAM_CHAT_ID = "ID"
 
@@ -56,15 +56,8 @@ def executar_automacao():
     # 3. Gerar Features
     df_features = calculate_dataframe_features(data)
     
-    # --- AJUSTE CRÍTICO: Compatibilidade de 14 colunas ---
-    # Remova o 'Target' e garanta que as colunas batam com o treino
     X_input = df_features.drop(columns=['Target']).tail(1)
     
-    # Se o erro de '14 features' persistir, você deve listar aqui as 
-    # colunas exatas que usou no treino do notebook:
-    # colunas_treino = ['EMA_9', 'EMA_21', 'SMA_7', 'ADX', '+DI', '-DI', ...]
-    # X_input = X_input[colunas_treino]
-
     # 4. Previsão
     try:
         previsao = modelo.predict(X_input)[0]
@@ -77,7 +70,7 @@ def executar_automacao():
     print(f"Previsão: R$ {previsao:.2f} ({variacao:.2f}%)")
 
     # Gatilho: Se a previsão for de alta acima de 0.7%
-    if variacao > 0.01:
+    if variacao > 0.07:
         alerta = (
             f"🚀 *Sinal de Compra: ITUB4*\n\n"
             f"• Preço Atual: R$ {preco_atual:.2f}\n"
